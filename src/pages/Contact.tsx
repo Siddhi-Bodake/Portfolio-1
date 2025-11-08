@@ -1,31 +1,7 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Mail, Phone, Linkedin, Github, MapPin, Send } from "lucide-react";
-import { toast } from "sonner";
+import { Mail, Phone, Linkedin, Github, MapPin } from "lucide-react";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast.success("Message sent! I'll get back to you soon.");
-    setFormData({ name: "", email: "", subject: "", message: "" });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
-  };
 
   const socialLinks = [
     {
@@ -78,81 +54,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
-          <div className="order-2 lg:order-1">
-            <div className="rounded-2xl bg-card border border-border p-8 glow-border">
-              <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: 'Orbitron' }}>
-                Send a Message
-              </h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <Label htmlFor="name" className="text-foreground">Name</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="mt-2 bg-muted border-border focus:border-primary"
-                    placeholder="Your name"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="email" className="text-foreground">Email</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="mt-2 bg-muted border-border focus:border-primary"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="subject" className="text-foreground">Subject</Label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="mt-2 bg-muted border-border focus:border-primary"
-                    placeholder="What's this about?"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="message" className="text-foreground">Message</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    className="mt-2 bg-muted border-border focus:border-primary resize-none"
-                    placeholder="Tell me about your project..."
-                  />
-                </div>
-
-                <Button 
-                  type="submit" 
-                  className="w-full bg-primary hover:bg-primary/90 text-background font-semibold glow-border text-lg"
-                >
-                  Send Message
-                  <Send className="ml-2 w-5 h-5" />
-                </Button>
-              </form>
-            </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="order-1 lg:order-2 space-y-6">
+        <div className="max-w-4xl mx-auto space-y-6">
             <div className="rounded-2xl bg-card border border-border p-8">
               <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: 'Orbitron' }}>
                 Contact Information
@@ -208,9 +110,8 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
-    </main>
-  );
-};
-
-export default Contact;
+      </main>
+    );
+  };
+  
+  export default Contact;

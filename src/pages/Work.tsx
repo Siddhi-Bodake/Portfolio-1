@@ -6,7 +6,7 @@ interface Project {
   id: number;
   title: string;
   description: string;
-  videoUrl: string;
+  videoPath: string;
   tags: string[];
   role: string;
 }
@@ -19,7 +19,7 @@ const Work = () => {
       id: 1,
       title: "Epic Fantasy RPG - Forest Realm",
       description: "Designed and implemented a vast forest level with branching paths, hidden secrets, and dynamic combat encounters. Created environmental storytelling elements and optimized for performance.",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoPath: "/videos/project1.mp4",
       tags: ["Level Design", "Unity", "RPG", "Environment"],
       role: "Lead Level Designer"
     },
@@ -27,7 +27,7 @@ const Work = () => {
       id: 2,
       title: "Sci-Fi Shooter - Space Station Alpha",
       description: "Crafted a multi-level space station with zero-gravity sections, intense combat arenas, and puzzle elements. Focused on player flow and pacing.",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoPath: "/videos/project2.mp4",
       tags: ["Level Design", "Unreal Engine", "FPS", "Sci-Fi"],
       role: "Level Designer"
     },
@@ -35,7 +35,7 @@ const Work = () => {
       id: 3,
       title: "Puzzle Adventure - Ancient Temple",
       description: "Designed intricate puzzle mechanics integrated with environmental storytelling. Created a progressive difficulty curve that rewards exploration and creative thinking.",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoPath: "/videos/project3.mp4",
       tags: ["Game Design", "Unity", "Puzzle", "Adventure"],
       role: "Game Designer"
     },
@@ -43,7 +43,7 @@ const Work = () => {
       id: 4,
       title: "Horror Experience - Abandoned Hospital",
       description: "Developed atmospheric horror level with strategic lighting, sound design integration, and psychological tension building. Implemented dynamic encounter systems.",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoPath: "/videos/project4.mp4",
       tags: ["Level Design", "Unreal Engine", "Horror", "Atmosphere"],
       role: "Lead Level Designer"
     },
@@ -51,7 +51,7 @@ const Work = () => {
       id: 5,
       title: "Racing Game - Urban Circuit",
       description: "Created a dynamic urban racing circuit with multiple routes, shortcuts, and environmental hazards. Optimized for high-speed gameplay and visual appeal.",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoPath: "/videos/project5.mp4",
       tags: ["Level Design", "Unity", "Racing", "Urban"],
       role: "Level Designer"
     },
@@ -59,7 +59,7 @@ const Work = () => {
       id: 6,
       title: "Platformer - Neon City",
       description: "Designed challenging platforming sequences with precise timing mechanics. Integrated collectibles and secrets to encourage exploration and replayability.",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoPath: "/videos/project6.mp4",
       tags: ["Game Design", "Unreal Engine", "Platformer", "Cyberpunk"],
       role: "Game Designer"
     }
@@ -89,17 +89,18 @@ const Work = () => {
             >
               {/* Video Container */}
               <div className="relative aspect-video bg-muted overflow-hidden">
-                <iframe
-                  src={project.videoUrl}
-                  title={project.title}
-                  className="w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <video
+                  src={project.videoPath}
+                  className="w-full h-full object-cover"
+                  controls
+                  preload="metadata"
+                >
+                  Your browser does not support the video tag.
+                </video>
                 
                 {/* Hover Overlay */}
-                <div className={`absolute inset-0 bg-background/90 flex items-center justify-center transition-opacity duration-300 ${
-                  hoveredId === project.id ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                <div className={`absolute inset-0 bg-background/90 flex items-center justify-center transition-opacity duration-300 pointer-events-none ${
+                  hoveredId === project.id ? 'opacity-100' : 'opacity-0'
                 }`}>
                   <div className="text-center">
                     <Play className="w-16 h-16 mx-auto mb-4 text-primary animate-pulse" />
@@ -146,7 +147,7 @@ const Work = () => {
         {/* Note */}
         <div className="mt-12 text-center">
           <p className="text-muted-foreground italic">
-            Note: Video links are placeholders. Replace with your actual gameplay demos and project walkthroughs.
+            Note: Add your video files to the public/videos/ folder (create it if needed) and update the videoPath for each project.
           </p>
         </div>
       </div>
