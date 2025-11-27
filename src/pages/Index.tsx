@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Gamepad2, Layers3, Code2 } from "lucide-react";
+import { ArrowRight, Gamepad2, Layers3, Code2, Download } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -44,21 +44,37 @@ const Index = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-primary hover:bg-primary/90 text-background font-semibold glow-border text-lg px-8"
               onClick={() => navigate('/work')}
             >
               View My Work
               <ArrowRight className="ml-2" />
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
+            <Button
+              size="lg"
+              variant="outline"
               className="border-primary text-primary hover:bg-primary/10 text-lg px-8"
               onClick={() => navigate('/contact')}
             >
               Get in Touch
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-secondary text-secondary hover:bg-secondary/10 text-lg px-8"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/Mandar_Resume..pdf';
+                link.download = 'Mandar_Resume.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+            >
+              Download Resume
+              <Download className="ml-2" />
             </Button>
           </div>
 

@@ -85,22 +85,6 @@ const Contact = () => {
               </p>
             </div>
 
-            {/* ArtStation Link (Placeholder) */}
-            <div className="rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 border border-primary/50 p-8 glow-border">
-              <h3 className="text-xl font-bold mb-2" style={{ fontFamily: 'Orbitron' }}>
-                View My Portfolio
-              </h3>
-              <p className="text-muted-foreground mb-4">
-                Check out my complete portfolio on ArtStation
-              </p>
-              <Button 
-                variant="outline" 
-                className="border-primary text-primary hover:bg-primary/10"
-                onClick={() => window.open('https://artstation.com', '_blank')}
-              >
-                Visit ArtStation Profile
-              </Button>
-            </div>
           </div>
         </div>
       </main>
