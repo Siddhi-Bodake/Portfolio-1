@@ -7,35 +7,28 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "mandar.mundaware@example.com",
-      href: "mailto:mandar.mundaware@example.com",
+      value: "mundawaremandar@gmail.com",
+      href: "mailto:mundawaremandar@gmail.com",
       color: "text-primary"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 98765 43210",
-      href: "tel:+919876543210",
+      value: "+918983075298",
+      href: "tel:+918983075298",
       color: "text-secondary"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/mandarmundaware",
-      href: "https://linkedin.com/in/mandarmundaware",
+      value: "linkedin.com/in/mandar-mundaware",
+      href: "https://www.linkedin.com/in/mandar-mundaware-5571652a4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       color: "text-accent"
-    },
-    {
-      icon: Github,
-      label: "GitHub",
-      value: "github.com/mandarmundaware",
-      href: "https://github.com/mandarmundaware",
-      color: "text-primary"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Mumbai, India",
+      value: "Pune, India",
       href: "#",
       color: "text-secondary"
     }

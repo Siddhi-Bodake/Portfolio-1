@@ -12,8 +12,7 @@ const About = () => {
   ];
 
   const tools = [
-    "Unity", "Unreal Engine", "Blender", "Maya", "Photoshop", 
-    "Substance Painter", "World Machine", "Perforce", "Git"
+    "Unity", "Unreal Engine"
   ];
 
   return (
@@ -30,20 +29,10 @@ const About = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          {/* Image */}
-          <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden glow-border animate-glow">
-              <img 
-                src={aboutVisual} 
-                alt="Game Designer Creative Process" 
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-
+        <div className="grid md:grid-cols-1 gap-12 items-center mb-16">
+          
           {/* Story */}
-          <div className="space-y-6">
+          <div className="space-y-10">
             <h2 className="text-3xl font-bold text-primary" style={{ fontFamily: 'Orbitron' }}>
               My Journey
             </h2>
@@ -55,16 +44,15 @@ const About = () => {
                 gameplay experiences.
               </p>
               <p>
-                My journey in game development began with a fascination for world-building and 
-                interactive storytelling. Over the years, I've honed my skills in level design, 
-                game mechanics, and technical implementation, always striving to push the boundaries 
-                of what's possible in interactive entertainment.
+                My journey into game design began the day I realized that making games could be just as exciting as playing them
+                I began exploring Unity, building small personal projects that taught me the foundations of level design, 
+                player flow, and visual storytelling. As I grew, I dove deeper into both Unity and Unreal Engine, 
+                mastering the tools that bring imagination to life.
               </p>
               <p>
-                I believe that great game design is about more than just mechanics—it's about 
-                creating memorable experiences that resonate with players. Every level, every 
-                interaction, and every moment is an opportunity to tell a story and create something 
-                extraordinary.
+                Through my Level Design Certification Course, I learned to see the world differently
+                not just as places and objects, but as potential levels filled with purpose and interaction. 
+                Every environment became a new design opportunity.
               </p>
             </div>
           </div>
@@ -104,29 +92,6 @@ const About = () => {
                 Dedicated to creating worlds that players love to explore
               </p>
             </div>
-          </div>
-        </div>
-
-        {/* Skills */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12 gradient-text" style={{ fontFamily: 'Orbitron' }}>
-            Skills & Expertise
-          </h2>
-          <div className="max-w-3xl mx-auto space-y-6">
-            {skills.map((skill) => (
-              <div key={skill.name}>
-                <div className="flex justify-between mb-2">
-                  <span className="font-semibold">{skill.name}</span>
-                  <span className="text-primary">{skill.level}%</span>
-                </div>
-                <div className="h-3 bg-muted rounded-full overflow-hidden">
-                  <div 
-                    className="h-full bg-gradient-to-r from-primary via-secondary to-accent transition-all duration-1000 ease-out glow-border"
-                    style={{ width: `${skill.level}%` }}
-                  ></div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
 
