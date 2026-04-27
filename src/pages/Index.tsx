@@ -5,6 +5,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 const Index = () => {
   const navigate = useNavigate();
+  const resumeFileName = 'mandar_resume1.1 .pdf';
 
   return (
     <main className="min-h-screen">
@@ -36,7 +37,7 @@ const Index = () => {
               Mandar Mundaware
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto">
-              Game Designer • Level Designer
+              Game Developer • Level Designer
             </p>
             <p className="text-lg md:text-xl text-primary mb-8 max-w-2xl mx-auto italic glow-text">
               "Crafting immersive worlds where creativity meets technology"
@@ -66,8 +67,8 @@ const Index = () => {
               className="border-secondary text-secondary hover:bg-secondary/10 text-lg px-8"
               onClick={() => {
                 const link = document.createElement('a');
-                link.href = '/Mandar_Resume..pdf';
-                link.download = 'Mandar_Resume.pdf';
+                link.href = encodeURI(`/${resumeFileName}`);
+                link.download = resumeFileName;
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
@@ -82,7 +83,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="p-6 rounded-xl bg-card border border-border hover:border-primary transition-all hover:glow-border group">
               <Gamepad2 className="w-12 h-12 mx-auto mb-4 text-primary group-hover:scale-110 transition-transform" />
-              <h3 className="text-2xl font-bold mb-2" style={{ fontFamily: 'Orbitron' }}>Game Design</h3>
+              <h3 className="text-2xl font-bold mb-2" style={{ fontFamily: 'Orbitron' }}>Game Development</h3>
               <p className="text-muted-foreground">Creating engaging gameplay mechanics and experiences</p>
             </div>
             <div className="p-6 rounded-xl bg-card border border-border hover:border-secondary transition-all hover:glow-border-pink group">
@@ -92,7 +93,7 @@ const Index = () => {
             </div>
             <div className="p-6 rounded-xl bg-card border border-border hover:border-accent transition-all hover:glow-border-pink group">
               <Code2 className="w-12 h-12 mx-auto mb-4 text-accent group-hover:scale-110 transition-transform" />
-              <h3 className="text-2xl font-bold mb-2" style={{ fontFamily: 'Orbitron' }}>Unity & Unreal</h3>
+              <h3 className="text-2xl font-bold mb-2" style={{ fontFamily: 'Orbitron' }}>Unity 3D and Unreal Engine</h3>
               <p className="text-muted-foreground">Expert in industry-leading game engines</p>
             </div>
           </div>

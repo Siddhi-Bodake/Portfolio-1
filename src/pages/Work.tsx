@@ -26,11 +26,11 @@ const Work = () => {
   const videoProjects: VideoProject[] = [
     {
       id: 1,
-      title: "Forest Path – Unity Level Flow Design",
-      description: "Designed a structured five-section forest level in Unity, focusing on player progression, path readability, and smooth gameplay flow.",
-      youtubeId: "wt-eaO6j5eY", // Replace with your real IDs
-      tags: ["Level Design", "Unity"],
-      role: "Level Designer"
+      title: "3D TEAM DEATHMATCH (TDM) MOBILE GAME",
+      description: "Developed a mobile multiplayer-style shooter in Unity featuring core combat mechanics, AI enemies and optimized touch controls for responsive gameplay.",
+      youtubeId: "eCOSa7RhK3I",
+      tags: ["Unity 3D", "Mobile Game Development"],
+      role: "Game Developer"
     },
     {
       id: 2,
@@ -40,6 +40,15 @@ const Work = () => {
       tags: ["Level Design", "Unreal Engine"],
       role: "Level Designer"
     },
+    {
+      id: 3,
+      title: "Forest Path – Unity Level Flow Design",
+      description: "Designed a structured five-section forest level in Unity, focusing on player progression, path readability, and smooth gameplay flow.",
+      youtubeId: "wt-eaO6j5eY", // Replace with your real IDs
+      tags: ["Level Design", "Unity"],
+      role: "Level Designer"
+    },
+    
     // Add more...
   ];
 
