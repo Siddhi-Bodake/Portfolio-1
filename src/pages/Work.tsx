@@ -85,7 +85,7 @@ const Work = () => {
     `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
 
   return (
-    <main className="min-h-screen pt-24 pb-16 sm:pb-20">
+    <main id="work" className="min-h-screen pt-24 pb-16 sm:pb-20">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6">
 
         {/* Header */}

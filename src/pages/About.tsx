@@ -15,7 +15,7 @@ const About = () => {
   ];
 
   return (
-    <main className="min-h-screen pt-24 pb-16">
+    <main id="about" className="min-h-screen pt-24 pb-16">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">

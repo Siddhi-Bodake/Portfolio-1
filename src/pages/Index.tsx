@@ -8,7 +8,7 @@ const Index = () => {
   const resumeFileName = 'mandar_resume1.1 .pdf';
 
   return (
-    <main className="min-h-screen">
+    <main id="home" className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-dvh flex items-center justify-center overflow-hidden pt-24 pb-12 sm:pt-28 sm:pb-16">
         {/* Background Image with Overlay */}
