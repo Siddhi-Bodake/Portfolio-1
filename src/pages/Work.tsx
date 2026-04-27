@@ -85,29 +85,29 @@ const Work = () => {
     `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
 
   return (
-    <main className="min-h-screen pt-24 pb-20">
-      <div className="container mx-auto px-4 max-w-7xl">
+    <main className="min-h-screen pt-24 pb-16 sm:pb-20">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6">
 
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="mb-4 text-5xl md:text-6xl font-bold gradient-text" style={{ fontFamily: 'Orbitron' }}>
+        <div className="text-center mb-12 sm:mb-16">
+          <h1 className="mb-4 text-4xl sm:text-5xl md:text-6xl font-bold gradient-text break-words" style={{ fontFamily: 'Orbitron' }}>
             My Work
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Gameplay videos, level walkthroughs, and detailed screenshots from my projects
           </p>
         </div>
 
         {/* ——————— VIDEO SECTION ——————— */}
-        <section className="mb-20">
-          <div className="flex items-center gap-4 mb-10">
-            <Play className="w-10 h-10 text-primary" />
-            <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: 'Orbitron' }}>
+        <section className="mb-16 sm:mb-20">
+          <div className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-10">
+            <Play className="w-8 h-8 sm:w-10 sm:h-10 shrink-0 text-primary" />
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold" style={{ fontFamily: 'Orbitron' }}>
               Video Showcases
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             {videoProjects.map((project) => (
               <div
                 key={project.id}
@@ -156,8 +156,8 @@ const Work = () => {
                 </div>
 
                 {/* Video Info */}
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-2" style={{ fontFamily: 'Orbitron' }}>
+                <div className="p-5 sm:p-6">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2 break-words" style={{ fontFamily: 'Orbitron' }}>
                     {project.title}
                   </h3>
                   <p className="text-sm text-primary font-semibold mb-3">{project.role}</p>
@@ -175,14 +175,14 @@ const Work = () => {
 
         {/* ——————— IMAGE GALLERY SECTION ——————— */}
         <section>
-          <div className="flex items-center gap-4 mb-10">
-            <ImageIcon className="w-10 h-10 text-primary" />
-            <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: 'Orbitron' }}>
+          <div className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-10">
+            <ImageIcon className="w-8 h-8 sm:w-10 sm:h-10 shrink-0 text-primary" />
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold" style={{ fontFamily: 'Orbitron' }}>
               Screenshots & Concepts
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
             {imageProjects.map((img) => (
               <div
                 key={img.id}
@@ -196,8 +196,8 @@ const Work = () => {
                   />
                 </div>
 
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                <div className="p-5 sm:p-6">
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 group-hover:text-primary transition-colors break-words">
                     {img.title}
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
@@ -224,7 +224,7 @@ const Work = () => {
         </section>
 
         {/* Footer Note */}
-        <div className="mt-20 text-center text-muted-foreground italic">
+        <div className="mt-14 sm:mt-20 text-center text-sm sm:text-base text-muted-foreground italic">
           <p>All videos hosted on YouTube • Images are in-game screenshots or concept renders</p>
         </div>
       </div>

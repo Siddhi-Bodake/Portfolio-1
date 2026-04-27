@@ -1,5 +1,4 @@
 import { Sparkles, Zap, Target, Heart } from "lucide-react";
-import aboutVisual from "@/assets/about-visual.jpg";
 
 const About = () => {
   const skills = [
@@ -17,26 +16,26 @@ const About = () => {
 
   return (
     <main className="min-h-screen pt-24 pb-16">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="mb-4 gradient-text" style={{ fontFamily: 'Orbitron' }}>
+        <div className="text-center mb-12 sm:mb-16">
+          <h1 className="mb-4 gradient-text break-words" style={{ fontFamily: 'Orbitron' }}>
             About Me
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             A passionate Game Designer crafting immersive experiences and interactive worlds
           </p>
         </div>
 
         {/* Main Content */}
-        <div className="grid md:grid-cols-1 gap-12 items-center mb-16">
+        <div className="grid md:grid-cols-1 gap-12 items-center mb-14 sm:mb-16">
           
           {/* Story */}
           <div className="space-y-10">
-            <h2 className="text-3xl font-bold text-primary" style={{ fontFamily: 'Orbitron' }}>
+            <h2 className="text-2xl sm:text-3xl font-bold text-primary" style={{ fontFamily: 'Orbitron' }}>
               My Journey
             </h2>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <div className="space-y-4 text-muted-foreground leading-relaxed text-sm sm:text-base">
               <p>
                 As a professional Game Designer and Level Designer, I specialize in creating immersive, 
                 interactive experiences that captivate players and bring virtual worlds to life. With 
@@ -59,33 +58,33 @@ const About = () => {
         </div>
 
         {/* Design Philosophy */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12 gradient-text" style={{ fontFamily: 'Orbitron' }}>
+        <div className="mb-14 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 gradient-text" style={{ fontFamily: 'Orbitron' }}>
             Design Philosophy
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 rounded-xl bg-card border border-border hover:border-primary transition-all group">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <div className="p-5 sm:p-6 rounded-xl bg-card border border-border hover:border-primary transition-all group">
               <Sparkles className="w-12 h-12 mb-4 text-primary group-hover:scale-110 transition-transform" />
               <h3 className="text-xl font-bold mb-2" style={{ fontFamily: 'Orbitron' }}>Innovation</h3>
               <p className="text-muted-foreground text-sm">
                 Constantly exploring new mechanics and pushing creative boundaries
               </p>
             </div>
-            <div className="p-6 rounded-xl bg-card border border-border hover:border-secondary transition-all group">
+            <div className="p-5 sm:p-6 rounded-xl bg-card border border-border hover:border-secondary transition-all group">
               <Zap className="w-12 h-12 mb-4 text-secondary group-hover:scale-110 transition-transform" />
               <h3 className="text-xl font-bold mb-2" style={{ fontFamily: 'Orbitron' }}>Engagement</h3>
               <p className="text-muted-foreground text-sm">
                 Creating experiences that keep players immersed and excited
               </p>
             </div>
-            <div className="p-6 rounded-xl bg-card border border-border hover:border-accent transition-all group">
+            <div className="p-5 sm:p-6 rounded-xl bg-card border border-border hover:border-accent transition-all group">
               <Target className="w-12 h-12 mb-4 text-accent group-hover:scale-110 transition-transform" />
               <h3 className="text-xl font-bold mb-2" style={{ fontFamily: 'Orbitron' }}>Precision</h3>
               <p className="text-muted-foreground text-sm">
                 Attention to detail in every level and gameplay element
               </p>
             </div>
-            <div className="p-6 rounded-xl bg-card border border-border hover:border-primary transition-all group">
+            <div className="p-5 sm:p-6 rounded-xl bg-card border border-border hover:border-primary transition-all group">
               <Heart className="w-12 h-12 mb-4 text-primary group-hover:scale-110 transition-transform" />
               <h3 className="text-xl font-bold mb-2" style={{ fontFamily: 'Orbitron' }}>Passion</h3>
               <p className="text-muted-foreground text-sm">
@@ -97,7 +96,7 @@ const About = () => {
 
         {/* Tools */}
         <div>
-          <h2 className="text-3xl font-bold text-center mb-12 gradient-text" style={{ fontFamily: 'Orbitron' }}>
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 gradient-text" style={{ fontFamily: 'Orbitron' }}>
             Tools & Technologies
           </h2>
           <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">

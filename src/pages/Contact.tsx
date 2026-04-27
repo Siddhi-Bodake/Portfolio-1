@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Mail, Phone, Linkedin, Github, MapPin } from "lucide-react";
+import { Mail, Phone, Linkedin, MapPin } from "lucide-react";
 
 const Contact = () => {
 
@@ -36,20 +35,20 @@ const Contact = () => {
 
   return (
     <main className="min-h-screen pt-24 pb-16">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="mb-4 gradient-text" style={{ fontFamily: 'Orbitron' }}>
+        <div className="text-center mb-12 sm:mb-16">
+          <h1 className="mb-4 gradient-text break-words" style={{ fontFamily: 'Orbitron' }}>
             Get in Touch
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Let's collaborate and create something extraordinary together
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto space-y-6">
-            <div className="rounded-2xl bg-card border border-border p-8">
-              <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: 'Orbitron' }}>
+            <div className="rounded-2xl bg-card border border-border p-5 sm:p-8">
+              <h2 className="text-xl sm:text-2xl font-bold mb-6" style={{ fontFamily: 'Orbitron' }}>
                 Contact Information
               </h2>
               <div className="space-y-6">
@@ -59,12 +58,12 @@ const Contact = () => {
                     href={link.href}
                     target={link.href.startsWith('http') ? '_blank' : '_self'}
                     rel={link.href.startsWith('http') ? 'noopener noreferrer' : ''}
-                    className="flex items-start gap-4 p-4 rounded-lg bg-muted hover:bg-muted/70 transition-all group hover:glow-border"
+                    className="flex min-w-0 items-start gap-4 rounded-lg bg-muted p-4 transition-all group hover:bg-muted/70 hover:glow-border"
                   >
-                    <link.icon className={`w-6 h-6 mt-1 ${link.color} group-hover:scale-110 transition-transform`} />
-                    <div>
+                    <link.icon className={`w-6 h-6 mt-1 shrink-0 ${link.color} group-hover:scale-110 transition-transform`} />
+                    <div className="min-w-0">
                       <p className="font-semibold mb-1">{link.label}</p>
-                      <p className="text-muted-foreground group-hover:text-foreground transition-colors">
+                      <p className="break-words text-sm sm:text-base text-muted-foreground group-hover:text-foreground transition-colors">
                         {link.value}
                       </p>
                     </div>
@@ -74,11 +73,11 @@ const Contact = () => {
             </div>
 
             {/* Additional Info */}
-            <div className="rounded-2xl bg-card border border-border p-8">
-              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Orbitron' }}>
+            <div className="rounded-2xl bg-card border border-border p-5 sm:p-8">
+              <h3 className="text-lg sm:text-xl font-bold mb-4" style={{ fontFamily: 'Orbitron' }}>
                 Let's Create Together
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 I'm always excited to discuss new projects, creative ideas, or opportunities 
                 to be part of your vision. Whether you need a level designer, game designer, 
                 or someone to bring your interactive world to life, let's connect!

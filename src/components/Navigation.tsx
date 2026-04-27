@@ -13,15 +13,15 @@ export const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <NavLink to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center font-bold text-background" style={{ fontFamily: 'Orbitron' }}>
+          <NavLink to="/" className="flex min-w-0 items-center space-x-2">
+            <div className="w-10 h-10 shrink-0 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center font-bold text-background" style={{ fontFamily: 'Orbitron' }}>
               MM
             </div>
-            <span className="text-xl font-bold hidden sm:block" style={{ fontFamily: 'Orbitron' }}>
+            <span className="hidden truncate text-lg font-bold sm:block md:text-xl" style={{ fontFamily: 'Orbitron' }}>
               Mandar Mundaware
             </span>
           </NavLink>
@@ -42,8 +42,9 @@ export const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className="md:hidden text-foreground p-2 -mr-2"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -56,7 +57,7 @@ export const Navigation = () => {
               <NavLink
                 key={item.to}
                 to={item.to}
-                className="block py-2 text-muted-foreground hover:text-primary transition-colors"
+                className="block rounded-md px-2 py-3 text-muted-foreground hover:text-primary transition-colors"
                 activeClassName="text-primary font-semibold"
                 onClick={() => setIsOpen(false)}
               >
